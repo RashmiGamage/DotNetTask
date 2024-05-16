@@ -3,7 +3,6 @@ using Microsoft.Azure.Cosmos;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Configuration.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
 
 // Retrieve the Cosmos DB connection string from configuration
@@ -31,8 +30,6 @@ builder.Services.AddSingleton<ICosmosDbServices>(sp =>
 });
 
 builder.Services.AddSingleton<IProgramService, ProgramService>();
-
-
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
